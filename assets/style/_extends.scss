@@ -1,0 +1,18 @@
+%buttons{
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid $color-secondary;
+  color: $color-secondary;
+  background: none;
+
+  &:disabled{
+    opacity: 0.5;
+  }
+
+  &:hover{
+    transform: translateY(1px);
+  }
+}

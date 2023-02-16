@@ -1,0 +1,120 @@
+@import 'fonts';
+@import 'variables';
+@import 'extends';
+@import 'base';
+
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color-primary;
+}
+
+.content{
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.userAddress{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $bg-color;
+
+  .userAddressList{
+    width: 100%;
+    padding: 10px;
+
+    .addressListItem{
+      margin-bottom: 10px;
+      
+    }
+  }
+}
+
+
+.registerAddressForm{
+  width: 600px;
+  padding: 20px;
+  background-color: $bg-color;
+  border-radius: 20px;
+
+
+  .addressInputModeSelect{
+   
+  }
+
+  input[type=text], select{
+    width: 70%;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+
+    &:focus{
+      box-shadow: inset 0px 0px 3px 0px black;
+    }
+
+    &:hover{
+      box-shadow: inset 0px 0px 3px 0px black;
+    }
+  }
+  input[type=radio]{
+    display: none;
+
+    &:checked + .radioHidden{
+      border-color: blue;
+      color: blue;
+    }
+  }
+
+  .radioHidden{
+    @extend %buttons;
+  }
+}
+
+.fieldRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 20px;
+
+  &.radio{
+    justify-content: space-evenly;
+  }
+
+  &.buttons{
+    justify-content: space-evenly;
+  }
+}
+
+.message{
+  text-align: right;
+  display: block;
+  padding: 5px 20px;
+  width: 100%;
+  height: 22px;
+  &.success{
+    color: green;
+  }
+  &.warning{
+    color: yellow;
+  }
+  &.danger{
+    color: red;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Endereço</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/style/main.css">
+  <script src="assets/script/main.js" defer></script>
+</head>
+<body>
+  <div class="content" id="content">
+
+    <div class="userAddress" id="user_address">
+      <div class="row">
+        <h1>Meus Endereços</h1>
+        <button id="btn_add_address" type="button">+ Adicionar Endereço</button>
+      </div>
+      <div class="userAddressList" id="user_address_list"></div>
+    </div>
+
+    <form action="#" class="registerAddressForm" id="register_address_form" autocomplete="off">
+      <h2>Novo Endereço</h2>
+      <fieldset class="addressInputModeSelect" id="address_input_mode_select">
+        <legend>Selecione</legend>
+        <div class="fieldRow radio">
+          <input type="radio" name="input_mode" id="use_zip_code" value="use_zip_code">
+          <label class="radioHidden" for="use_zip_code">Sei meu CEP</label>
+          <input type="radio" name="input_mode" id="search_zip_code" value="search_zip_code">
+          <label class="radioHidden" for="search_zip_code">Não sei meu CEP</label>
+        </div>
+      </fieldset>
+
+      <fieldset id="address_input_by_zip_code">
+        <legend>Utilize seu CEP</legend>
+        <div class="fieldRow">
+          <label for="zip_code">CEP</label>
+          <input id="zip_code" type="text" title="Cep com 8 dígitos" autocomplete="off">
+        </div>
+        <span class="message"></span>
+      </fieldset>
+
+      <fieldset id="address_input_by_address_selection">
+        <legend>Buscar Endereço</legend>
+
+        <div class="fieldRow">
+          <label for="select_street">Informe a Rua</label>
+          <input type="text" id="select_street" autocomplete="off">
+        </div>
+        <span class="message"></span>
+
+        <div class="fieldRow">
+          <label for="select_state">Selecione o Estado</label>
+          <select id="select_state"></select>
+        </div>
+        <span class="message"></span>
+
+        <div class="fieldRow">
+          <label for="select_city">Selecione a Cidade</label>
+          <select id="select_city"></select>
+        </div>
+        <span class="message"></span>
+
+        <div class="fieldRow">
+          <label for="select_zip_code">Selecione o Cep</label>
+          <select id="select_zip_code"></select>
+        </div>
+        <span class="message"></span>
+        
+      </fieldset>
+
+      <fieldset id="register_address_confirmation">
+        <legend>Confirmar Endereço</legend>
+      </fieldset>
+
+      <div class="fieldRow buttons" id="action_buttons">
+        <button type="submit" id="btn_submit_address">Salvar Endereço</button>
+        <button type="reset" id="btn_reset_address">Cancelar</button>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>

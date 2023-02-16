@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1{
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 24px;
+  color: $color-secondary;
+  padding: 10px;
+}
+h2{
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 20px;
+  color: $color-secondary;
+  padding: 5px;
+}
+h3{
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 18px;
+  color: $color-secondary;
+  padding: 5px;
+}
+p, input[type=text], select{
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 5px;
+}
+span{
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 12px;
+}
+legend{
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-secondary;
+  padding: 5px;
+}
+label{
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: 14px;
+  color: $color-secondary;
+  padding: 5px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border: none;
+}
+button{
+  @extend %buttons;
+}
